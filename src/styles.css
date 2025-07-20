@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0; padding: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+
+.day-cell {
+  border: 1px solid #ddd;
+  min-height: 100px;
+  background: white;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.day-cell:hover {
+  background: #f0f8ff;
+}
+
+.current-day {
+  border: 2px solid #007bff;
+}
+
+.event-item {
+  background: #007bff;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+  font-size: 12px;
+  cursor: grab;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button.primary {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button.primary:hover {
+  background: #0056b3;
+}
+
+button.secondary {
+  background: #aaa;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+button.secondary:hover {
+  background: #888;
+}

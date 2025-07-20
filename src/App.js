@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Calendar from "./components/Calendar"; // Make sure the path is correct
+import { EventProvider } from "./context/EventContext"; // Again, path must match
+import "./styles.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <EventProvider>
+      <div className="app-container">
+        <h1>Event Calendar</h1>
+        <Calendar />
+      </div>
+    </EventProvider>
   );
-}
+};
 
 export default App;
