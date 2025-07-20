@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Event Calendar App – FLAM Task 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a complete **Event Calendar** project made with **ReactJS**, featuring full CRUD operations, drag-and-drop functionality, and persistent storage using `localStorage`. Users can create, move, and delete events easily on a dynamic calendar view.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- React JS (with Create React App)
+- react-beautiful-dnd (for drag-and-drop)
+- date-fns (for date manipulation)
+- uuid (for generating unique IDs)
+- gh-pages (for deployment)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation & Setup
 
-### `npm test`
+1. **Create React App:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npx create-react-app flam-task3
+cd flam-task3
 
-### `npm run build`
+2.**Install Dependencies**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install react-beautiful-dnd date-fns uuid
+npm install gh-pages --save-dev
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tasks Completed
+✅ Calendar layout created
+The calendar dynamically renders the days of the selected month using date-fns. Each day is clickable and interactive.
 
-### `npm run eject`
+✅ Events can be created
+A form pops up when a day is clicked, allowing the user to add an event with a title and description. Each event is saved with a unique ID.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+✅ Events can be deleted
+Every event card includes a delete button. Clicking it removes the event from the calendar and updates the localStorage.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ Events can be moved using drag-and-drop
+Using react-beautiful-dnd, users can drag events from one day and drop them onto another. The UI updates in real-time and reflects the new date.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✅ Data saved in localStorage
+All created events are stored in the browser’s localStorage. Even if the user refreshes or closes the tab, the events remain.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+✅ App deployed to GitHub Pages
+The final build was deployed using gh-pages, making the project live and accessible via a public URL.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Github integration
+git init
+git remote add origin https://github.com/Shreya02omer/FLAM-TASK3.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Update package.json
+"homepage": "https://Shreya02omer.github.io/FLAM-TASK3",
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+ ## Deployment on GitHub Pages
+ npm run build
+ npm run deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+📍Live Project URL: https://Shreya02omer.github.io/FLAM-TASK3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
