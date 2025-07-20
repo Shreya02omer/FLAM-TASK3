@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FLAM-TASK3/static/css/main.91cd9b17.css",
+    "main.js": "/FLAM-TASK3/static/js/main.ee8b68a9.js",
+    "index.html": "/FLAM-TASK3/index.html",
+    "main.91cd9b17.css.map": "/FLAM-TASK3/static/css/main.91cd9b17.css.map",
+    "main.ee8b68a9.js.map": "/FLAM-TASK3/static/js/main.ee8b68a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91cd9b17.css",
+    "static/js/main.ee8b68a9.js"
+  ]
+}
